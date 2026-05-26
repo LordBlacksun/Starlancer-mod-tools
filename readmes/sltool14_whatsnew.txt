@@ -1,0 +1,48 @@
+What's new on version 1.4?
+--------------------------
+
+- There are now 2 separate buttons for saving and exiting SLTool
+- Fixed the cube drag to be proportional to the zoom factor, zooming in will provide more
+  acurate attachment positioning.
+- Capship bounding boxes have now been implemented. Be sure to take into consideration the
+  capship guidelines when modelling a capship!! (very important)
+- Added the ability to copy an attachment, inverting the X axis of the copy, if you wish.
+  Should speed up attachment positioning.
+- The ability to place an attachment on the nearest polygon has been added, allows for more
+  acurate attachment positioning.
+- Auto-rotate option automatically adjusts the attachment to sit right on top of a polygon.
+  Very useful, for example, for capship turrets!
+- You can now choose if the SHP is a fighter or capship in StarLancer.
+- Component properties now allow the name, hitpoints and debris references to be changed.
+  Very useful for capship components.
+- Transparency for 16-bit textures has been implemented. The rings of Saturn no longer look
+  like they're sitting on a black square.
+- You can now see non-selected attachments as wireframe cubes, should be useful to keep
+  track of what attachments you already placed. Also, each cube now has different colors:
+  engines are in red, guns are blue, missile mount points are yellow, etc)
+- Hotkeys have been defined for each of the views: 1,2,3,4,q,w,e
+- Ability to pan the ship up/down/left/right has been implemented. Should be useful if you
+  want to focus on a part of a capship. (shift to toggle mouse modes)
+- You can now merge a SHP in order to load other components. For example, you can convert
+  with 3ds2sl the capship main body into a SHP and the bridge into another SHP and then
+  merge both in SLTool. You can also move SHP components around (shift to toggle mouse
+  modes). Very useful for placing imported components on the intended place. You can
+  delete components too.
+- If you wish, instead of scaling the entire model you can scale only the selected
+  component (type-1). 
+- You can choose to scale engine flames when scaling a capship
+- The SHP unpacker has been integrated, SLTool can now load compressed SHP files.
+- The rendering window now only shows triangles that are facing you. Should make easier
+  to detect triangles that are facing the wrong way.
+- You can now define animations for a given ship component (like on MadDog's BiPlane
+  propellor)
+- Clicking on "Open SHP" now goes automatically to the StarLancer ships\ directory.
+  Filtering of *.SHP files is also done.
+- Back firing weapons are now possible.
+- Dummy Triangle option implemented (for MilkShape exports that use some of the
+  special effects that the briefing room doesn't like)
+- Capship settings for block13 and block14
+
+Mario "HCl" Brito
+mbrito@student.dei.uc.pt
+mario_brito@clix.pt

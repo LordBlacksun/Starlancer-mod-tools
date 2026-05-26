@@ -1,0 +1,16 @@
+Installation:
+Simple enough.  Just extract this file using some type of unzipping utility, such as Winzip or Pkunzip, into the directory of your choice.  Double-click on the executable and you're on your way to extracting all the files to your heart's content.
+
+Operation:
+Run the executable and either type in the file path and name of the .HOG file you want to look at or use the Browse button to select it.  The files will be extracted to the folder you set as the output directory.  Once you have the .HOG file selected simply press the Open Archive button to view the file list.  You may then select any, all, or none of the files within that list and extract them by, ironically enough, hitting the Extract button.
+
+Features or Lack Thereof:
+Well, this program was written in a few nights, and although it's clean and hopefully bug free it doesn't offer a whole host of cool options.  This version will support any .HOG file that Starlancer came with.  It can view the entire file list of the .HOG file, and you can extract whatever you'd like.  It supports multiple file extraction.  It does not support sorting however, so don't keep trying to sort by size or name only to get disappointed.  The whole list is there though, and the file extensions are sorted together, just in a predetermined order.  *THIS IS NOT AN EDITOR OR REPACKER, ONLY AN EXTRACTOR*
+
+Bugs and/or Issues:
+What we know about the files inside of the .HOG file are somewhat limited.  The BIK files are BINK movie files.  The .TGA (Targa) files contained in the .HOG files cannot be opened by any graphics application we tried, if you come across something that can open them, or you know exactly what kind of targa format it is please let us know.  The mp3's seem to work fine, and the .FAT files appear to be some kind of RIFF Wave file, but again of an unkown type.  The .SPR and .SHP files are game specfic, so there's not alot we can do here when it comes to viewing and editing.  As far as we know the program should have no bugs, but if you find any please let us know.
+
+Good day and happy extracting!
+
+DraconPern - draconpern@hotmail.com
+KingLord - kinglord@sephiroth.com

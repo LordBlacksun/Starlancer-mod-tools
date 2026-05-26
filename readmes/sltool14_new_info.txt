@@ -1,0 +1,113 @@
+ ---------------------------------------------------------------------
+|                      SL Tool  -  Version 1.4                        |
+|                       By Mario "HCl" Brito                          |
+ ---------------------------------------------------------------------
+
+
+ --> Info on the new features
+
+- Mouse mode
+
+In previous versions of SLTool dragging the mouse in any view mode
+except FreeView would move the currently selected attachment.
+For this version, two more modes have been added: you can move
+the currently selected component (type-1) or focus the view into
+another part of the ship.
+
+
+
+- Scaling
+
+The new features under Scaling are "type-1 only" and "flames". If the
+first is checked, clicking on "Larger" or "Smaller" will only scale the
+selected component (type-1). The later will scale engine flames as 
+well, may be useful for enlarging flames for capship use.
+
+
+
+- Attachments
+
+The "Copy" button simply creates a new attachment, equal to the one
+that was selected. "Copy-Invert X" does the same as "Copy", except
+it inverts the X coordinate, making it a nice mirror function (if
+the ship is simmetrical, it'll be very useful). 
+
+The "Nearest Position" button automatically places the attachment 
+on top of the nearest polygon. If the "Rotate" checkbox is
+checked, it will also be rotated, this will be useful for capship
+turrets, missile hardpoints. Depending on if you're placing a 
+gun or a gun object, you may or may not want to use this feature,
+use common sense when deciding this.
+
+The "Back" checkbox further rotates the object 180 degrees around
+the Y axis. Useful, for example, to have a gun/gun obj/missile
+mounting point facing back. For reverse thrust, depending on where
+you're placing the reverse engine flames, most likely you'll NOT
+want to have this checked.
+
+
+
+- Components (type-1 objects)
+
+The "Create Box" button creates a bounding box around the selected
+component. This box will be used for capship collisions by the
+game. "Clear Box(es)" will eliminate all the boxes associated
+to the currently selected component.
+
+The "Animation" button defines the animations for the selected
+component. Each animation has a duration and at least one
+animation frame. The angles and positions of each frame will
+be interpolated through the time values, so you can create
+any animation from a simple rotation to complex sequences of
+translations and rotations. You can give any name to the
+animation "Trigger". While the mission editor isn't out,
+you'll want the animation to be already active, so name
+the trigger "startup".
+
+The "Delete" button deletes the currently selected attachment.
+
+The "Merge SHP" button loads another SHP file into the already
+loaded one. You can even load the same SHP file that's already
+loaded to duplicate it's components.
+
+The "Dummy Triangle" checkbox allows you to fix crashes when
+entering the briefing room if the ship uses certain "glass"
+effects, please refer to the MilkShape SHP Export plugin
+for more information.
+
+About the "Block13" and "Block14" checkboxes: capships typically
+have one main body and numerous other components. If the capship
+can die, these checkboxes must be checked on the capship main 
+body.
+
+Double clicking on the component also brings up a menu. There
+you can change the name of the component, and set up several
+other values, the most important of which probably are the
+"Type" and "Damage points".
+
+
+
+ --> Capship guidelines
+
+You should pay careful attention to this, as i estimate this will be
+the source of 99% of the head aches considering capship collisions.
+A capship component MUST NOT have any intersecting polygons and MUST
+be a closed object. In other words, capship components must be convex
+or the StarLancer collision scheme will fail.
+
+I have tested the Wing Commander TCS Midway and TCS Cerberus and these
+ships work. Replacing original SL bounding boxes with my own also 
+works, so if you find yourself flying through a capship check for 
+intersecting polygons within the same component.
+
+Unfortunately this means that most capships from the contest won't be
+working unless they are converted to SHP format again, with a few
+modifications (exporting with the MilkShape plugin and checking for
+intersecting polys on each mesh)
+
+
+
+
+Mario "HCl" Brito
+mbrito@student.dei.uc.pt
+mario_brito@clix.pt

@@ -1,0 +1,142 @@
+ ---------------------------------------------------------------------------
+|                     LWO - StarLancer Object Converter                     |
+|                               First Release                               |
+|  By Mario "HCl" Brito  (mbrito@student.dei.uc.pt or mario_brito@clix.pt)  |
+ ---------------------------------------------------------------------------
+
+
+- What this program does/doesn't do
+
+This program takes a Lightwave model and converts it to SHP format, which
+StarLancer can read. This is a first release (or "test release"); although
+it's completely functional, i'm releasing this as a DOS program in hope of
+getting some early feedback from 3D artists regarding if this program is 
+(or isn't) suitable to the task at hand. The next version of this program 
+will work under Windows (with a very nice interface) and will be a more 
+generic converter: it will eventually read some other games file formats 
+(Wing Commander and Homeworld, for example) and some other 3D formats.
+It won't be ready any time soon tho...
+
+The first thing to keep in mind is that this program will only convert LWOB
+files, it cannot handle LWLO (Layered objects) or LWO2, at least not yet. 
+LWOB conversion was tested with several models available on the Buda5 project
+(http://mods.firstones.com/buda5).
+
+The program can handle 3 types of mapping: Planar, Cylindrical and Spherical.
+From what i've read (i do not own Lightwave), there are other mappings:
+Marble, Grid, Dots, etc. These are unsupported. Also, only 2 texture
+parameters are supported: size and center. All other parameters (such as 
+fallout and velocity) will be ignored.
+
+Also, it can only handle 3 and 4-sided faces. All other faces (pentagons, 
+hexagons, etc) will be ignored. Detail polygons will also be ignored.
+Another limitation (although from StarLancer) is number of textures: a SHP
+file can have a maximum of 20 textures and the poly count should be kept
+low (~500 polygons is ok, and SL will probably handle no more than 1000).
+Keep in mind that 4-sided faces will be triangulated, which means that each
+quad will be divided into 2 triangles.
+
+
+
+
+
+- More about mapping types
+
+My advice is that you use Planar mapping whenever possible: it was tested
+with the StarFury conversion (available on LancersReactor) and the Earth
+Alliance Atmospheric Shuttle and seems to be working fine. 
+
+Cylindrical mapping was tested with a couple other Buda5 models, but seem
+somewhat inacurate. The texture-coordinates generation routines seem fine, 
+which is strange, considering the results.
+
+Spherical mapping was implemented but not tested, as i couldn't find any
+model that used it, so i honestly don't know if it's working.
+
+Feedback would be apreciated, especially on Cylindrical and Spherical
+mapping.
+
+
+
+
+
+
+- Usage
+
+Simple enough: lwo2sl <lwo file>
+It will generate out.shp, which is the converted SHP file. Use SLEdit to
+import the textures into StarLancer (you may have to flip the textures
+vertically before importing them) and either SLEdit or SLTool to arm the
+ship. Afterwards create new Stats either with Warthog's StatEdit or SLEdit.
+
+Remember, textures should be 256x256 BMPs, loaded with the included PAL file.
+
+LWO2SL also generates 3 DOC files and command line status reporting what it's
+doing, both of which i used for debugging. I didn't bother to remove these,
+as they might still be useful to identify potential problems.
+
+
+
+
+
+
+- Script??
+
+I can imagine a lot of people nodding in disaproval, but this can be a useful
+feature. The script is executed during conversion process, and it's used to 
+rotate the ship and make sure it's oriented correctly (you don't want your 
+ship flying, say, backwards). If you prefer to rotate your ship in Lightwave
+instead of messing with it, be my guest, the result will be the same (I 
+didn't have this option, since i don't own LightWave).
+
+Basically, the principle is: you have a LightWave ship and it's not
+oriented correctly (it's flying sideways, for example). You'll have to rotate
+the ship to make it's orientation correct. The commands are:
+
+x <angle in degrees> - rotates the ship around the x axis 
+y <angle in degrees> - rotates the ship around the y axis 
+z <angle in degrees> - rotates the ship around the z axis 
+n 1 - negates the X axis (useful if textures look mirrored and the ship is
+      symetrical in SL)
+e - end of script
+
+And that's it, i would bet this is the simplest possible script in existance.
+
+As an example, for the Buda5 StarFury conversion, the ship was flying upside
+down and the texture appeared mirrored. I created the following script that
+fixed the ship:
+
+z 180
+n 1
+e
+
+(the script file is script.dat, btw)
+
+In short, the 180 degrees rotation around the Z axis flipped the ship the
+right way (it was upside down) and negating the X axis made the texture
+look right (the EA symbol on top was "mirrored" and on the left, while on the
+Buda5 site a screenshot showed it on the right side, displayed correctly).
+"n 1" really inverted the model's X axis, but since the ship is symmetrical
+you can't really tell. "e" marks the end (required).
+
+
+By the way, the StarLancer coordinate system is:
+
+Positive Z - "Ahead" of you
+Positive Y - points down
+Positive X - points right
+
+
+
+
+
+- Auto-scaling
+
+This version of the converter automatically scales the ship to be as large
+as the Predator (roughly). You can't change this. The next version (the
+Windows one) will handle both scaling and rotating visually (like SLTool),
+which means you'll have more control (the script will also disappear, as a
+consequence).
+
+EOF
+--

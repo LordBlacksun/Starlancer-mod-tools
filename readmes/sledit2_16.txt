@@ -1,0 +1,418 @@
+<***************************************************************************************>
+|                                SL Edit Version 2.16 					|
+|                                      April 2001                                       |
+<***************************************************************************************>
+
+General Note: Before making any modifications make sure that StarLancer is closed and that
+	you don't have any of its associated files open. If you had a previous version of
+	SLEdit installed you should have disabled all features and uninstalled the program
+	(making sure that the original directory has been removed) before installing this
+	version.
+
+To install the 2.16 update patch do the following:
+* - Disable features in SLEdit 2.x
+* - unpack sledit.exe to the sledit folder usually located in C:\Program Files
+* - unpack shipsData.txt, readme.txt also to the sledit folder
+* - unpack the cube.bmp and gcube.bmp to the sledit\3d folder
+* - Enable features and your ready to go
+
+[SL Edit Readme Index]
+
+1.)  New Features
+2.)  Before Uninstall
+3.)  Before Setup - Enable button
+4.)  Using ships modified by HCl's SL Tool - IMPORTANT
+5.)  Swaping Capships (Especially home carrier)
+6.)  Guns with "readme" designation
+7.)  Importing Ships / Model Converting / Texture Importing
+8.)  Ship Switcher - a little more info
+9.)  Changing Guns and Ship Stats Editing
+10.)  Using the Hog Editor - and conflicts with other Editing
+11.) TroubleShooting
+12.) In the future
+
+
+<***************************************************************************************>
+[1 - NEW FEATURES]
+* - Bug fixed in regards to unpack1w.dll error
+* - Allows the importing and switching of capships
+* - Allows removal of imported fighters and associated textures plus new interface
+* - Allows the use of 24-bit textures on capship models (should NOT be used on fighters)
+* - The TCACHE editor is now fuctional so modelers can use in game textures if they want
+	- Can be used to replace skins on ingame ships
+	- By Double Clicking on any texture, the texture will be converted and opened in
+	    MS Paint
+* - Supports the newest version of HCl's 3ds2sl converter
+* - SL Tool can be launched from most displays by double clicking on a ship name 
+      (The user must place SL Tool in the StarLancer folder)
+      (On most Alliance fighters SL Tool will only open one of the two ships (Tiger / 45th))
+* - First updated readme file in several versions! =)
+
+<***************************************************************************************>
+[2 - BEFORE UNINSTALL]
+
+Please use the DISABLE / RESTORE button BEFORE uninstalling. SL Edit makes many 
+modifications to StarLancer files and only the disable / restore button will put 
+everything back into place as good as new.
+
+<***************************************************************************************>
+[3 - Setup] - The Enable Button
+It may take up to 20-30 seconds to setup everything up. SL Edit is performing about 80 
+texture operations so be patient. (Exporting / converting / importing etc...) This is 
+better than including several megs of textures with the program.
+
+Make sure that STARLANCER IS NOT OPEN! The setup will fail if one of the 
+necessary files is in use. SL Edit uses shipstats from the shipstats.bin file - so if 
+you have any mods in here they will show up in SL Edit. Default is defined as what was 
+installed on the system when SL Edit was installed. I have included a backup 
+shipstats.bin file in the SLEdit\backup folder.
+
+
+<***************************************************************************************>
+[4 - Using a ship modified by HCl's SL Tool]
+
+Because of SL integration issues, DON'T MODIFY any of the .shp files stored in the 
+StarLancer\ships folder. To use the loadout screen properly, SL Edit must switch two
+fighters every time because of the way StarLancer is designed. These two files MUST have
+the same number and type of attachment blocks.
+
+If you want to use a SL Tool modified fighter, copy the .shp file you want or unpack it, 
+make your modifications to this and only this file, and then IMPORT IT. SEE THE SECTION ON 
+SHIP SWITCHING - HOW IT USES FILES or you may not get the file that you think you are. Also
+you should check out the HOG section also.
+
+If you want to fly this fighter use the ship switcher - switch an Alliance fighter with 
+the new imported fighter. It should have a radioactive symbol next to it on the left. 
+Be aware that since you are importing this ship, SL Edit uses a standard set of ship 
+stats. So you'll want to copy the shipstats from the original fighter and paste them into 
+the modified fighter.
+
+<***************************************************************************************>
+[5 - Switching Capships]
+
+The home carrier, the Reliant or Yamato, has very strict requirements regarding the 
+objects that the model contains. Meaning when StarLancer loads an ingame mission it
+makes scripted calls to the launch doors, it depends on the launch bays being there for
+each ship etc... When the mission editor is released we should be able to find out more
+about how StarLancer goes about launching ships. If each mission has these events scripted, 
+then the mission editor might allow us to forget about minor details and launch fighters
+from imported capships or other ingame capships. If the launch details are included in the
+executable file then all we can do is make capships that CLOSELY resemble the capships
+we are replacing.
+
+WARNING:
+If any mission depends on scripted calls to the objects of a capship that have been replaced
+and it can't find the object(s) that it is looking for, StarLancer may become unstable or
+mission events may not progress as designed.
+
+<***************************************************************************************>
+[6 - Guns with "readme" designation]
+
+The Coal Huge Gun and the Alliance Huge gun will cause the game to crash if the user 
+changes from full guns to individual. This is not a bug in SL Edit, this is an 
+integration issue. The gun wasn't designed to be used by the flight HUD. 
+
+The AI will use this weapon without any problems. Use at your own risk. Might be able to 
+be fixed eventually.
+
+The NOVA CANNON - Fighters can only use it when switched with the Pheonix. Something to 
+do with how SL preps its flight engine. More Research will go into this.
+
+<***************************************************************************************>
+[7 - Importing Ships / Model Converting / Texture Importing ]
+
+   Importing a single ship - Unpack the custom ship and its textures (.shp and .bmp files) 
+	and its optional stat file (.txt) to a folder. Then go into the 'Import Ships' 
+	tab and then into the import paine. Click browse and find the .shp file that you 
+	unpacked. Then a new window will come up and you can rename the fighter by 
+	clicking once on its listed name. Then 	press import and that should be it. 
+	When you want to fly the ship go into the Ship Switcher tab and you will find 
+	that the newly imported ship will be listed at the bottom of the 'Change to' 
+	panel depending on which display mode you are in Capship / Fighter.
+
+   Importing a ship pack - Unpack all the shps and textures and optional stat files to a 
+	folder. Depending on the way the pack was setup, each ship and its textures could 
+	have its own folder, so when unpacking you may need to make sure that you are 
+	mantaining the file layout. Browse to the place where the .pak file is located 
+	just like you would for a single ship. Then a list of all the ships in the pack 
+	come up. Fighters have a yellow radioactive icon, and capships have a blue icon. 
+	You can uncheck any of the fighters in the pack if you don't want to import them. 
+	You can also rename any fighter in the pack to something more desirable. Any ship 
+	name that is in	red has the same name as an existing ship. SL Edit will force you 
+	to rename these ships before it allows you to import them. 
+
+	After pressing import SL Edit should go and import each ship in the list and its
+	associated textures and optional stat files. 
+
+   Ship Pack file format:
+	
+	"WC Total Conversion Project"
+	"vampire.shp",			"Vampire",		"Phoenix"
+	"panther.shp",			"Panther",		""
+	"\tigershark\tigershark.shp",	"Tiger Shark",		"Coal Haidar (AI)"
+	"\piranha\piranha.shp",		"Piranha",		""
+	"\wasp\wasp.shp",		"Wasp",			""
+	"\dragon\dragon.shp",		"Dragon",		""
+	"\vaktoth\vaktoth.shp",		"Vaktoth",		""
+	"\dralthi\dralthi.shp",		"Dralthi",		"Coal Lagg"
+	"\devray\devray.shp",		"Devil Ray",		""
+
+
+	First thing is the name of the ship pack in parenthesis.
+	Then on each line there are three fields. Each item is to be in parenthesis and 
+	seperated by a comma.
+
+	"field1","field2","field3"
+
+	Field1 - This contains just the name of the .shp file at the location of the .pak file,
+	  or it can contain a realtive path from a the location of the .pak file to the ship.
+
+	  i.e. in the folder C:\windows\desktop\wcconv the .pak file, and the .shp file, and all
+	    the .bmp files are located here. So the first field would contain "vampire.shp"
+
+	  i.e. in the folder C:\windows\desktop\wcconv the .pak file is here, but also a folder
+	    named tigershark. In the folder tigershark there is a tigershark.shp and all of its
+	    .bmp files. So field1 contains "\tigershark\tigershark.shp". This is equivalent to
+	    the path C:\windows\desktop\wcconv\tigershark\tighershark.shp So field1 is just 
+	    added to the path of the location of the .pak file.
+
+	Field2 - This is the name of the ship that you will see in the import window and in the
+	  ship switcher.
+
+	Field3 - This is an optional field. You can leave it blank but you still need 2 
+	  parenthesis. This field allows your ship pack to automatically switch ships. i.e. you
+	  want the Phoenix to be swithced with the Vampire when someone imports the ship pack.
+	  When importing, SL Edit will prompt the user if they want to do this. This name MUST
+	  be the name of the ship AS IT APPEARS IN SLEDIT. So notice the "Coal Haidar (AI)" is
+	  appropriate, but "Coal Haidar" isn't because that is not how it appears in SL Edit.
+
+   Ship Stats File Format:
+	The ship stats file should have the exact same name as the .shp file except with the .txt
+	  extensions on it. The file should look like this:
+
+	MaxSpeed,		400
+	Inertia,		.90
+	YawMax,			.09
+	YawInertia,		.85
+	PitchMax,		.09
+	PitchInertia,		.85
+	RollMax,		.15
+	RollInertia,		.96
+	ShieldStrength,		19
+	ShieldRecharge,		10
+	ArmorStrength,		15
+	AfterBurnerFuel,	200
+	GunEnergy,		110
+	GunRecharge,		8
+	Ammo,			9000
+
+	- I would recomend that you test your stat settings for each ship before posting for 
+	someone to download. Ship stats can make the difference on the entire feel and 
+	personality of your ship. God stats are usually not desirable.
+
+   3ds2SL model converting - This is HCl's 3ds to StarLancer model converter. It offers
+	many features from capship modifications to lighting effects on faces. See the
+	3D readme in the conversion section.
+
+	I put a sample named cube.3ds in the SLEdit\3D folder that you can try out plus 
+	a sample texture.
+
+
+   Texture Importing - SLEdit supports two texturing modes, but these share some 
+	characteristics:
+
+	* - The texture must have dimensions of 2 raised to the x power and not excede 
+		256x256. i.e. 128x128, 128x256, 128x128, 32x32 etc...
+
+	* - The texture MUST be a windows bitmap (.bmp)
+
+
+	* - When SL Edit goes to import ships, it also automatically imports the textures.
+	      If it can't find a texture at the location of the .shp file, it will prompt
+	      the user to browse for it.	
+
+	24-bit images (converted by SLEdit to 16-bit textures: These textures should ONLY 
+	  be used for detailing on capships. If you try put these on fighters, you will 
+	  see a significant performance drop in battles. I would recommend that you only 
+	  use them sparingly for capship detailing.
+
+	8-bit color (256 Indexed color): This is the texturing mode that all ingame 
+	  fighters and capships use. To convert textures you need to open your image in a 
+          graphics program and convert from 24-bit to 256 color using the slpal.pal file 
+	  located in the SLEdit\3D folder. If your texture is already 256 color but is using 
+	  a different index than the slpal.pal file you might need to convert it to a 
+	  24-bit bitmap first. 
+
+	  If your fighter as textures with strange colors then it is likely that you didn't 
+	  convert it with the slpal.pal file correctly.
+
+	Users can manually import textures if they wish. The same requirements above apply.
+	The "For Fighter" check box creates a green loadout texture so that if a ship uses
+	the texture, StarLancer will not crash when the loadout screen comes up.
+
+
+<***************************************************************************************>
+[8 - Ship Switcher - a little more info]
+
+   What it does exactly - 
+	Allows you to fly any ingame or imported fighter. When you switch a fighter,
+	you get a custom ship - meaning that if you replace the wolverine with the
+	Basilisk, and you modify the Wolverine --> Basilisk's stats , - IT WON'T AFFECT 
+	THE BASILISK THAT THE COALITION USES! It is completely unique. So don't worry 
+	about creating super fighters for fear that the enemy might use them against you
+	unless of course that is what you want.
+
+	It also allows you to set which ships your opponents fly and wingmen fly.
+
+   What you should know for best use - 
+	If you want all ships to have the same stats and/or guns. Modify the fighter
+	BEFORE it is switched with any ship. When a ship is switched, it takes the
+	new replacements stats at that given time and creates a unique fighter. If you 
+	want all your Basilists to be able to fly at superluminal speeds, modify the 
+	The actuall Coal Basilisk, then switch with your Alliance fighters. Then, if you
+	want to restore the enemies version of the ship, all you have to do is hit the 
+	restore stats, and restore weapons buttons when you have the Basilisk selected.
+
+   How this fits into Stats /gun editing and that black arrow -
+	When you try to modify stats and/or gunds on a ship that has been replaced, you 
+	will get the stats of the unique switched fighter. You should see a black arrow 
+	and the name of the replacement ship.
+
+
+   How it uses files -
+	When the switcher is first enabled it automatically unpacks and writes a S47 in
+	the first three characters of each unpacked files hog table entry. So, 
+	t_german_wolverine.shp would become S47erman_wolverine.shp. If you are looking for
+	these files in the hog, sort by name and find the s's.
+
+	The Switcher REPLACES BOTH THE TIGER AND STANDARD VERSIONS AT THE SAME TIME for
+	ease of use.
+
+	Each file is unpacked with its original name, but when it is replaced, it becomes
+	shipname.org. So if you replace the Wolverine with the Basilsk this is what 
+	happens:
+
+	   After enabling:
+		t_german_wolverine.shp
+		german_wolverine.shp
+		Rus_Basilist.shp
+		
+	   After switching:
+		t_german_wolver.shp	---> Actually the Basilist
+		t_german_wolver.org	---> Actually the Tiger Wolverine
+
+		german_wolver.shp	---> Actually the Basilist
+		german_wolver.org	---> Actually the Standard Wolverine
+		
+		Rus_Basilist.shp	---> Actually the Basilist
+	
+	   After unswitching:
+
+		t_german_wolver.shp	Everything is back to normal
+		german_wolver.shp	
+		Rus_Basilist.shp	
+
+	Bottom line is if you want to use a file in here, make sure that you are actually
+	getting the right ship. The .org extension WILL ALWAYS be the actual ship. 
+
+	Also - imported fighters will NEVER have an .org extension because they can't be 
+	switched to another fighter, only another fighter can switch to them. SL Edit
+	will however create a .bak file that is used for restoring an imported ships
+	weapons to default.
+
+<***************************************************************************************>
+[9 - Changing Guns and Ship Stats Editing]
+
+	This allows you to change the ship stats and weapon loadout for a ship or the
+	ship that a given ship is switched with. 
+
+	The gun editor doesn't allow you to add new gun points, but it does allow to
+	change missiles into gun points and be able to modify any of the guns on the 
+	ship. See section "4 - Guns with "readme" designation" about the ships marked
+	with readme and associated problems.
+
+	I grouped the guns into pairs for the best stablity and use. You might have
+	problems firing these guns individually, but should work fine on full.
+
+	DON'T FORGET THAT SOME GUNS USE ACTUAL AMMO - so stock your ship according.
+
+	You can RIGHT CLICK to COPY STATS from on ship to another
+	You can RIGHT CLICK to CHANGE WEAPONS
+
+	I am still working on the missile points. StarLancer doesn't like it when I 
+	replace regular guns with missiles. I am pretty sure that this will work 
+	just fine on latter versions.
+
+
+<***************************************************************************************>
+[10 - Using the Hog Editor - and conflicts with other Editing]
+
+	The Ship Switcher renames the hog table entries on the fighters in StarLancer.
+	If you use the Restore FAT button while the switcher is enabled, you could
+	restore all the above mentioned entries - causing the shipswitcher to not work
+	correctly. 
+
+	THE HOG EDITOR DOES NOT IMPORT FILES! - The hog editor only extracts and unpacks
+	files. The copy and paste function is only used for copy size and offset entires
+	in the table for certain mods.
+
+<***************************************************************************************>
+[11 - TroubleShooting]
+
+
+[Game Crashes when using Allied or Coal Huge Gun]
+	- This will happen to fighters used by the player if he/she switches from full guns
+	to individual. The fighter hud doesn't support these guns. I added them
+	on there anyway to use at your own risk. They work great on AI fighters
+	and it might be possible to get these working fully after some research is
+	done on the SPR file format.
+
+[Game crashes when using a capship]
+	- This is the result of StarLancer requiring that the capship that you are using
+	have a certain object in it for a scripted mission event. Nothing can be done 
+	about this, unless you make your capship have all the objects of the capship that
+	you are replacing, or when the mission editor comes out, when should hopefully be
+	able to avoid these types of scripted events.
+
+[Guns won't fire individually]
+	- It seems that there is a max number of individual guns on a ship, but they will
+	all fire on full. Some more research might clear this up.
+
+[Nova Cannon - the Nova Cannon will only work on the Pheonix or ships switched with
+	the Pheonix.]
+	
+	- StarLancer determines this somehow from the launch screen. With some more research 
+	it might be able to be corrected.
+
+[Game locks up after switching torpedo bomber (Hades / Kamov) ]
+
+	- The lockup will occur once the torpedo bomber is loaded by StarLancer. The bombers
+	use a Type 8 attachment. HCl might be able to update his SL Tool latter. It
+	really isn't a priority at the moment considering I don't know how to 
+	loadout a torp bomber with any torpedos. This could be an in mission event.
+
+[Ship shakes and guns won't fire]
+	
+	- The ship you are switched with has as an (AI) next to the name or you are using
+	some custom ship. If you have the AI This means that the fighter is only suitable 
+	for the AI, but can be given to your wingmen and enemies. Not sure if this can be 
+	fixed. Seems to be a result of the irregular size or centering.
+
+[Kossac and or other imported ships don't group guns in pairs correctly]
+	
+	- The kossac is centered horribly so my pair calculations are affected. For best
+	results make your attachement blocks symetrical.
+
+
+<***************************************************************************************>
+[12 - In the Future]
+
+	- I will add a button to make all the neccesary file unpacking for the mission
+	editor so users don't have to do this manually.
+
+Written by Dustin Evans
+dwevans@inreach.com
+Copyright (C) 2000 - 2001
+
+
+StarLancer is a Trademark of Digital Anvil.

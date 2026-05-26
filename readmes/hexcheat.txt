@@ -1,0 +1,56 @@
+Created by Userunfriendly
+July 7, 2000
+
+The usual blurb, this is not affiliated with Warthog, Microsoft, etc in 
+any way, any thing you do with these files is at your own risk, and
+if you screw up and blow up your applications or your computer, don't
+come crying to me. The files may not be distributed without this Readme!
+
+Ok, for the fun part.
+
+In here are three sets of folders, named "guns", "missiles" and "ships".  In each folder are shipstat.bin, missilestat.bin, and gunstat.bin files.  Each files have been hex edited and TESTED for stability in a Starlancer.  Simply copy over the specific files into your Starlancer directory, and let it overwrite the original game files AFTER you make a backup of the originals.  If you forget to, copy out your saved game files, uninstall and reinstall the game to get back to the default values.
+
+
+Ships.
+
+In this are nine catagories.
+These are the favorite ships I've used in the game.  Each ship has...
+
+top speed of shroud=400
+agility of basilisk=9
+shield rating of karak=9
+armor of haidar=9
+shield recharge of sabre=16
+gun recharge of basilisk=10
+gun energy of mirage=220
+afterburner fuel of shroud=150
+
+I could have modified the values to anything, however since one of my goals was to generate stable ships, and not risk boundry overflow errors, I've kept them down to reasonable numbers.
+
+Now, there are two sets of files.  The "tshroud" for example, refers to the shroud, but the tigers version.  As you might know, if you play the game past mission 11, the 45th gets to become the Tigers and the data Starlancer uses to generate the performance characteristics of the ships changes to definitions found at the end of the bin-file, rather than at the beginning. So, you can use the "coyote" definition until mission 12, then you must copy over the "tcoyote" file for you to play the same ship as in mission 11.
+
+Oh yeah, the "tshroud" has got the armor and shields of a Kurgen corvette.  This was the special baby I used in mission 24. The ripper file is a specially constructed file I did by special request.  In it, the ships the rippers use is almost indestructable...shields and armor of a Kurgen.  Increases their chances of making it thru a mission, wot??
+
+Understand each file contains only ONE modified ship value.  When you replace "coyote" with "patriot" the coyote becomes normal again.  this way, only you have the super killer ship, unless a wingman has the same ship as you.
+
+Missiles.
+
+I've only tamperd with maximum velocity, agility and lock times for raptor, and hawk.  Remember, the Coalition will be using missiles too. Hawks and raptors now lock instantly, are long ranged, and have speed of 600...perfect for torp intercepts, and you can still outrun them in one of the super ships with afterburner.
+
+Solomons have twice the range.  That's all I did because I know for a fact basilisks use solomons.
+
+Guns.
+
+Proton guns will now do damage around 30-35, cyclic rate around 10.  Massively hard hitting, yet still reasonably safe to spray around wingmen, and won't be likely to accidentally frag a capitol ship subtarget you are NOT suppose to blow up.
+
+Vulcan battery now has 5 times the cyclic rate, and I've changed the range down to 140.  To my experience, vulcans just shoot too damned far, its really easy to frag a wingman.
+
+Tachyon cannons now shoot really fast,and aren't such a energy hog.  
+
+Its absolutely safe to use vulcan cannons, and I chose proton guns and tachyon  cannons because only one coalition ship mounts them, and the ship isn't a type you encounter often.  For example, neither basilisks or sabres use any of these guns.
+
+Thanks to Warthog for making such a cool game, one that I know I'll be playing again later for the sheer visual spectacle, and thanks to Bargib for the best site on Starlancer (http://www.lancersreactor.com).  This file is in response to all the starlancer affectionados I've met in the forum, who kept asking about those specail purpose craft I've enjoyed creating and gloating about in the edit and spoiler sections.
+
+Now get out there and kick some Coalition butt!!!!!!!!!!!
+
+

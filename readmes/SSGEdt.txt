@@ -1,0 +1,27 @@
+StarLancer Saved Game Editor v1.0.0
+  Coded by Twister of Twisted Media
+  E-mail: vincent_gw_lewis@hotmail.com
+  ICQ: 12674360
+  URL: http://www.twistedmedia.f2s.com
+  Thanks go out to Boomer of Confuzed.com
+
+If you the file Msvbvm60.dll is missing you can obtain it from
+http://www.winappz.com/dlldownload.html
+
+With this software, you can take a saved game or profile (used
+for multi-player games) and modify the following:
+- Callsign
+- Number of kills
+- Rank
+- Level
+- Difficulty (on saved games only)
+- Mission (on saved games only)
+
+*NOTE* Please make a backup of your saved games and 'profile.bin'.
+Before editing profile.bin (for multi-player games), you must
+first select the correct player from the game's single player
+mode by either selecting the player in the drop down or typing
+in the name.
+I am not responsible for any loss of data caused by this
+software. I have tested this software and am confident that it
+does work correctly so this is just a measure of precaution.

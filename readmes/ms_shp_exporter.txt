@@ -1,0 +1,70 @@
+MilkShape SHP Exporter
+----------------------
+
+
+
+How to use it:
+--------------
+
+To install the plugin, just copy the DLL to the MilkShape directory. It should load 
+automatically when you start MilkShape.
+
+This Exporter plugin provides an easy way to save a 3D model from MilkShape in SHP format.
+A basic SHP structure is created with the 3D data, much like with 3ds2sl. The only differences
+between 3ds2sl and this plugin is that you don't have to save to 3DS format first (and then
+convert to SHP format) and unlike 3ds2sl the conversion process doesn't merge all meshes into
+one, which may be useful if you want each mesh to be a capship component.
+
+Like the latest 3ds2sl, the MilkShape plugin allows the use of special effects, such as
+translucent ("glass") surfaces. This is defined when you write the material name you want to
+use on that surface. Here are the possible effects:
+
+00 - shaded white
+01 - solid wireframe
+02 - bright glass without texture
+03 - regular texture with no light shading
+04 - bright glass look with texturing
+05 - regular texture - but bright with no shading
+06 - regular texture - except no reflective light effect
+07 - regular texture
+08 - regular texture - translucent
+09 - bright white
+10 - regular texture - translucent
+11 - bright white
+12 - bright white
+13 - bright white
+14 - bright white
+15 - bright white
+
+As an example, if you have a material that is named "hull" and want it to be translucent,
+you start the material name with a ) followed by the 2 numbers of the effect you want to use,
+for example, 08. Afterwards, you can put any name you want. The material name becomes:
+")08hull". Any mesh that uses this material will be translucent.
+
+
+
+
+Known Issues with the special effects:
+--------------------------------------
+
+If you use effects 00, 01, 02 or 03, it's possible that the game will crash when entering the
+briefing room. This is a StarLancer issue, since the model will work fine when you skip the 
+briefing phase with the "potato" cheat. To fix this, load SLTool v1.4, select the component
+that uses the special effect and check the "Dummy Triangle" option. The briefing room
+apparently doesn't like meshes whose triangles are all using these special effects, so adding
+a Dummy Triangle (which is invisible and with no special effects defined) will fix the problem.
+
+This isn't likely to happen with 3ds2sl: since your model will most likely not be fully
+translucent and it merges all meshes into one, there will be other triangles that use no
+special effect, so the briefing room won't malfunction.
+
+
+ATTENTION: If you need to define a bounding box (capship collision structure) in SLTool but
+also need a Dummy Triangle in the mesh, define the bounding box first! Only check the "Dummy
+Triangle" option afterwards.
+
+
+Feedback is apreciated:)
+
+Mario "HCl" Brito
+mbrito@student.dei.uc.pt

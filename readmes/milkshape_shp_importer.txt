@@ -1,0 +1,21 @@
+StarLancer SHP Import Plugin for MilkShape
+
+This plugin allows you to import StarLancer ship files into MilkShape, so you can edit it
+in any way you wish (be sure to give credit the original modeller for his work tho!).
+Although the plugin is meant for use with uncompressed SHP files, it should handle compressed
+SHPs as well. It can import any SHP: capships, weapons etc and i implemented an option that 
+allows you to filter out the debris meshes, in case you don't wish to have them converted 
+(a message box pops up).
+
+It may be worth of mentioning that i developed and tried the plugin with version 1.4.5
+of MilkShape
+
+To install the plugin, just place the DLL on the MilkShape directory and you're set to go!
+A "StarLancer SHP" option should appear under the File->Import menu, and you can import your 
+ships from there. Textures should be extracted with Dustin's SLEdit and placed on the directory
+where the SHP file is.
+
+Feedback and suggestions are appreciated:)
+
+Mario "HCl" Brito
+mbrito@student.dei.uc.pt

@@ -1,0 +1,49 @@
+ ---------------------------------------------------------------------
+|                      SL Tool  -  Version 1.4                        |
+|                       By Mario "HCl" Brito                          |
+ ---------------------------------------------------------------------
+
+
+ --> How to use this program (basic features)
+
+The interface was built with simplicity in mind. You should be able to
+do everything easily with the mouse and a few key strokes:
+
+The file operations are self explained...
+
+After the model is loaded, you may not be able to see it. Use the slide
+bar on the 3d screen to zoom out until you do.
+
+When you have the ship on your sights, you'll likely be in FreeView
+(that's the default view mode). In this mode, you can rotate the ship
+around by dragging the ship model. Before worrying with the other view
+modes, choose a type1 block by clicking on it. Notice how the block9
+window (the attachments) is updated. Click on one attachment... notice
+how a red cube appears on the position where the attachment is.
+
+Before worrying about the red cube, double click on the attachment.
+A dialog will appear that allows you to change the property of this
+attachment. If the selected attachment is an engine flame, you can 
+choose it's color. You'll also be able to change the coordinates by
+hand if you wish, although that's not necessary.
+
+The add and remove buttons allow you to add and remove attachments
+from the selected Type-1 Block.
+
+To place an object where you want without having to enter coordinates
+by hand, you have the first 3 views: Bottom, Left and Front. These
+view modes don't allow you to rotate the ship by dragging it. Instead,
+if you drag the mouse on the ship window, you will see the red cube
+representing the attachment move. Place it where you wish. You'll
+probably have to use at least 2 views to place the attachment where you
+want: the bottom view allows you to adjust axis X and Z, the left view
+allows you to adjust axis Y and Z and the front view allows you to
+adjust the X and Y axis.
+
+
+That's pretty much it.
+Send any comments and suggestions to either of my e-mail adresses.
+
+Mario "HCl" Brito
+mbrito@student.dei.uc.pt
+mario_brito@clix.pt

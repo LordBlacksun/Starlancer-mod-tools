@@ -1,0 +1,38 @@
+STARLANCEDIT v1.11
+(c) 2000 Raidersoft Technologies All Rights Reserved
+
+*** Installation ***
+- Run Setup.exe and follow the prompts
+
+*** Using Starlancedit ***
+Interface is pretty straightforward...
+
+- Load a File (Default Location is C:\Program Files\Microsoft Games\StarLancer\SAVES)
+- Make whatever changes you want
+- Save the File
+
+The Current Filename will appear one of 3 ways:
+MYGAME01.IFF - A game that hasn't been altered since loaded.
+MYGAME01.IFF* - A game that has been changed but not yet saved.
+MYGAME01.IFF (Saved) - Changes were just saved.
+
+When you save changes to a file, a backup is made in the same directory as the game file.
+For example, when you saved changes to MYGAME01.IFF the original is saved as MYGAME01.BAK
+
+This editor is Totally Absolutely FREE!  Please don't charge money for it, but please give it to all your squadmates!
+
+Thanks!
+
+Raidersoft
+
+
+*** Revision History ***
+
+v 1.11
+--------
+Fixed Font Problem
+Renamed 'OK' button 'Exit'
+
+v 1.1
+--------
+First Public Release
